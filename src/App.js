@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from './components/Header';
+import PopupBox from './components/PopupBox';
+
+class App extends React.Component {
+  state = {
+    showPopupBox: false
+  };
+
+  // Show Popup on click
+  showPopupBox = e => {
+    this.setState({ showPopupBox: true });
+  };
+
+  // Close Popup on click
+  closePopupBox = e => {
+    this.setState({ showPopupBox: false });
+  };
+
+  render() {
+    return (
+      <div className='modal'>
+        <Header />
+        <button className='model-open-button' onClick={this.showPopupBox}>
+          Click me to Popup
+        </button>
+        <PopupBox
+          showPopupBox={this.state.showPopupBox}
+          closePopupBox={this.closePopupBox}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
