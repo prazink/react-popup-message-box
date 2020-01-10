@@ -4,13 +4,13 @@
   box-sizing: border-box;
 }
 
-.model-header {
+.modal-header {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
 }
 
-.model-open-button {
+.modal-open-button {
   display: block;
   margin: 0 auto;
   background-color: blue;
@@ -20,6 +20,12 @@
   border-radius: 10px;
   font-size: 1.25rem;
   font-weight: normal;
+}
+
+.modal-open-button:focus {
+  background-image: none;
+  outline: 0;
+  box-shadow: none;
 }
 
 .modal-box {

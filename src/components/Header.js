@@ -3,7 +3,7 @@ import React from 'react';
 function Header() {
   return (
     <>
-      <h1 className="model-header">React Popup Modal Box</h1>
+      <h1 className='modal-header'>React Popup Modal Box</h1>
     </>
   );
 }

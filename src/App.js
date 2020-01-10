@@ -23,7 +23,7 @@ class App extends React.Component {
     return (
       <div className='modal'>
         <Header />
-        <button className='model-open-button' onClick={this.showPopupBox}>
+        <button className='modal-open-button' onClick={this.showPopupBox}>
           Click me to Popup
         </button>
         <PopupBox

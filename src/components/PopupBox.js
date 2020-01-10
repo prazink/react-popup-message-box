@@ -2,10 +2,15 @@ import React from 'react';
 
 const PopupBox = props => {
   const { showPopupBox, closePopupBox } = props;
+  // Add active class onClick button
+  let modalClass = ['modal-box'];
+  if (showPopupBox) {
+    modalClass.push('active');
+  }
   return (
     <>
       {showPopupBox && (
-        <div className='modal-box'>
+        <div className={modalClass.join(' ')}>
           <div className='modal-body'>
             <button className='close-button' onClick={closePopupBox}>
               &times;
